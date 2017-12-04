@@ -131,29 +131,37 @@
 		switch (event.keyCode) {
 			// W
 			case 87:
-				dy = -20;
-				dx = 0;
+				if (dy !== 20 || body.length === 1) {
+					dy = -20;
+					dx = 0;
+				}
 				break;
 			// S
 			case 83:
-				dy = 20;
-				dx = 0;
+				if (dy !== -20 || body.length === 1) {
+					dy = 20;
+					dx = 0;
+				}
 				break;
 			// D
 			case 68:
-				dx = 20;
-				dy = 0;
+				if (dx !== -20 || body.length === 1) {
+					dx = 20;
+					dy = 0;
+				}
 				break;
 			// A
 			case 65:
-				dx = -20;
-				dy = 0;
+				if (dx !== 20 || body.length === 1) {
+					dx = -20;
+					dy = 0;
+				}
 				break;
 			// R
 			case 82:
 				if (play === false) {
 					body = [{x: 0, y: 0}];
-					eat_arr - [];
+					eat_arr = [];
 					play = true;
 					score = 0;
 					level = 1;
